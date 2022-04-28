@@ -56,15 +56,15 @@ const zucchine = [
   }
 ];
 
-const scalaPeso = (calcoloPeso() > 1000) ? 'kg' : 'gr'
+const scalaPeso = (calcoloPeso(zucchine) > 1000) ? 'kg' : 'gr'
 
 /**
  * Calcolo del peso totale delle zucchine
  * @returns pesoZucchine
  */
-function calcoloPeso() {
+function calcoloPeso(array) {
   let pesoZucchine = 0;
-  for(let zucchina of zucchine){
+  for(let zucchina of array){
    pesoZucchine += zucchina.peso; 
   }
   console.log(pesoZucchine);
@@ -73,5 +73,5 @@ function calcoloPeso() {
 
 document.getElementById('peso').innerHTML = 
 `
-Il peso totale delle zucchine &egrave; ${calcoloPeso() > 1000 ? calcoloPeso() / 1000 : calcoloPeso()} ${scalaPeso}
+Il peso totale delle zucchine &egrave; ${calcoloPeso(zucchine) > 1000 ? calcoloPeso(zucchine) / 1000 : calcoloPeso(zucchine)} ${scalaPeso}
 `
