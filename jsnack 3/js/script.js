@@ -9,15 +9,15 @@ while(!isNaN(saluto)){
   }
 }
 
-const stringaInvertita = invertiStringhe(saluto);
+const stringaInvertita = (string) => string.split('').reverse().join('');
 
-function invertiStringhe(stringa) {
-  const stringaInvertita = stringa.split('').reverse().join('');
-  console.log(stringaInvertita);
-  return stringaInvertita
-}
+// function invertiStringhe(stringa) {
+//   const stringaInvertita = stringa.split('').reverse().join('');
+//   console.log(stringaInvertita);
+//   return stringaInvertita
+// }
 
 document.getElementById('parola-invertita').innerHTML = 
 `
-La stringa inserita (${saluto}) invertita &egrave; "${stringaInvertita}".
+La stringa inserita (${saluto}) invertita &egrave; "${stringaInvertita(saluto)}".
 `;
