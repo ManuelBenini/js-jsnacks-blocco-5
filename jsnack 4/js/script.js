@@ -30,6 +30,8 @@ pesoMinore();
 
 function pesoMinore() {
   let pesoMinore = bici[0].peso;
+
+  /* PRIMO METODO
   for(let i = 0; i < bici.length; i++){
     if(pesoMinore > bici[i].peso){
       pesoMinore = bici[i].peso;
@@ -40,7 +42,20 @@ function pesoMinore() {
       stamp(nome, peso)
     }
   }
+  */
+
+  // OPPURE 
+  for(let biciclette of bici){
+    const {nome, peso} = biciclette;
+    if(peso < pesoMinore){
+      pesoMinore = peso;
+      stamp(nome, peso)
+    }else{
+      pesoMinore = pesoMinore;
+    }
+  }
   
+
 }
 
 function stamp(nome, peso) {
@@ -49,5 +64,3 @@ function stamp(nome, peso) {
   La bici con il peso minore &egrave; ${nome} e pesa ${peso}kg!
   `;
 }
-
-
