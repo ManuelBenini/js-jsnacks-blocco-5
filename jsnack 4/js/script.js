@@ -26,16 +26,16 @@ const bici = [
   }
 ];
 
-pesoMinore();
+pesoMinore(bici);
 
-function pesoMinore() {
-  let pesoMinore = bici[0].peso;
+function pesoMinore(array) {
+  let pesoMinore = array[0].peso;
 
   /* PRIMO METODO
-  for(let i = 0; i < bici.length; i++){
-    if(pesoMinore > bici[i].peso){
-      pesoMinore = bici[i].peso;
-      const {nome, peso} = bici[i];
+  for(let i = 0; i < array.length; i++){
+    if(pesoMinore > array[i].peso){
+      pesoMinore = array[i].peso;
+      const {nome, peso} = array[i];
       console.log(nome);
       console.log(peso);
       console.log('il peso minore è', pesoMinore , 'della bici' , nome);
@@ -45,7 +45,7 @@ function pesoMinore() {
   */
 
   // OPPURE 
-  for(let biciclette of bici){
+  for(let biciclette of array){
     const {nome, peso} = biciclette;
     if(peso < pesoMinore){
       pesoMinore = peso;
