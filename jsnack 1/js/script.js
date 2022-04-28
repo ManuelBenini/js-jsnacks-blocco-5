@@ -73,5 +73,5 @@ function calcoloPeso() {
 
 document.getElementById('peso').innerHTML = 
 `
-Il peso totale delle zucchine &egrave; ${calcoloPeso() > 1000 ? parseInt(calcoloPeso() / 1000) : calcoloPeso()} ${scalaPeso}
+Il peso totale delle zucchine &egrave; ${calcoloPeso() > 1000 ? calcoloPeso() / 1000 : calcoloPeso()} ${scalaPeso}
 `
